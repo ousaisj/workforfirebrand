@@ -1,0 +1,217 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Sony</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <link rel="stylesheet" href="style.css?v=1.0">
+
+</head>
+
+<body>
+	<div id="sony-container">
+
+		<div id="phases">
+			<div id="sony-bg">
+				<div id="sony-bg-three"  class="sony-bg"></div>
+				<div id="sony-bg-two"  class="sony-bg"></div>
+				<div id="sony-bg-one"  class="sony-bg"></div>
+			</div>
+
+			<div id="sony-text">
+				<div id="sony-text-one" class="sony-text"><img src="glitch_rethink.png" /></div>
+				<div id="sony-text-two" class="sony-text"><img src="glitch_your.png" /></div>
+				<div id="sony-text-three" class="sony-text"><img src="glitch_reality.png" /></div>
+				<div id="sony-text-glitch" class="sony-text"><img id="sony-glitch-img" src="glitch.gif" /></div>
+			</div>
+
+			<div id="sony-phase-two">
+				<div id="sony-phase-two-bg" class="sony-text"></div>
+				<div id="sony-phase-two-text" class="sony-text"></div>
+			</div>
+
+			<div id="sony-phase-end">
+			    <div id="sony-phase-pre-end" class="sony-text"></div>
+				<div id="sony-phase-end-bg" class="sony-text"></div>
+				<div id="sony-phase-end-logo" class="sony-text"></div>
+				<div id="sony-phase-end-button" class="sony-text"></div>
+				<div id="sony-phase-end-text" class="sony-text"></div>
+				<div id="sony-phase-end-findout" class="sony-text"></div>
+			</div>
+
+		</div>
+
+		<div id="sony-button"></div>
+		<div id="sony-border"></div>
+	</div> 
+
+<script type="text/javascript">
+	
+	var sonybutton = document.getElementById('sony-button')
+	var phaseone = document.getElementById('sony-bg')
+	var phasetwo = document.getElementById('sony-phase-two')
+	var endphase = document.getElementById('sony-phase-end')
+
+	var t1 = document.getElementById('sony-text-one')
+	var t2 = document.getElementById('sony-text-two')
+	var t3 = document.getElementById('sony-text-three')
+	var t4 = document.getElementById('sony-text-glitch')
+
+	var p2t1 = document.getElementById('sony-phase-two-text')
+	var p2bg = document.getElementById('sony-phase-two-bg')
+	var p3t1 = document.getElementById('sony-phase-end-text')
+	var p3t2 = document.getElementById('sony-phase-end-findout')
+	var p4bg = document.getElementById('sony-phase-pre-end')
+	var p5btn = document.getElementById('sony-phase-end-button')
+
+	var b1 = document.getElementById('sony-bg-one')
+	var b2 = document.getElementById('sony-bg-two')
+	var b3 = document.getElementById('sony-bg-three')
+
+	var timer = 200
+
+	var bg = 1
+	var loop = 0
+	var maxloop = 0
+
+	function startIntro () {
+
+		switch (bg) {
+			case 1 :
+				b1.style.opacity = 1
+				b3.style.opacity = 0
+				t1.style.opacity = 1
+				timer = 1000
+			break;
+			case 2 : 
+				b2.style.opacity = 1
+				b1.style.opacity = 0
+				t2.style.opacity = 1
+				timer = 1000
+			break;
+			case 3 :
+				b3.style.opacity = 1
+				b2.style.opacity = 0
+				t3.style.opacity = 1
+				timer = 1000
+			break;
+			case 4 :
+				t4.style.display = 'block'
+				t1.style.opacity = 0
+				t2.style.opacity = 0
+				t3.style.opacity = 0
+				timer = 500
+			break;
+		}
+
+		bg++
+
+		if (bg > 4) {
+			bg = 1
+			loop++
+		}
+
+		setTimeout(function() {
+			if (loop == 1) {
+				phaseTwo()
+			} else {
+				startIntro()
+			}
+		},timer)
+	}
+
+	setTimeout(function() { startIntro() }, 500)
+
+	function phaseTwo () {
+		phasetwo.style.opacity = 1;
+		phaseone.style.opacity = 0;
+		t4.style.display = 'none'
+		document.getElementById('sony-glitch-img').src = ''
+
+		setTimeout(function() { 
+			p2bg.style.opacity = 1;
+		}, 1000)
+
+        
+		setTimeout(function() { 
+				p2bg.style.opacity = 0;
+		}, 3000)
+
+
+		setTimeout(function() { 
+			p2t1.style.opacity = 1;
+		}, 3500)
+
+		setTimeout(function() { 
+			p2t1.style.opacity = 0;
+		}, 4500)
+
+
+		setTimeout(function() {
+			phasetwo.style.opacity = 0;
+			setTimeout(function() { endFrame() },500)
+		}, 5000)
+
+
+	}
+
+	function endFrame () {
+
+		document.getElementById('sony-glitch-img').src = 'glitch.gif'
+
+		b1.style.opacity = 1
+		b3.style.opacity = 0
+		
+		phasetwo.style.opacity = 0
+		p2t1.style.opacity = 0;
+		endphase.style.opacity = 1;
+
+		setTimeout(function() { 
+			p3t2.style.opacity = 1;
+		}, 1000)
+
+		setTimeout(function() { 
+			p3t2.style.opacity = 0;
+		}, 3000)
+
+		setTimeout(function() { 
+			p3t1.style.opacity = 1;
+		}, 5000)
+
+		setTimeout(function() { 
+			p3t1.style.opacity = 0;
+		}, 7000) 
+        
+        setTimeout(function() { 
+		    p5btn.style.opacity = 1;
+		}, 9000) 
+
+        
+		setTimeout(function() {
+			maxloop++
+			if (maxloop < 2) resetAd()
+		}, 11000)
+	}
+
+	function resetAd() {
+		p5btn.style.opacity = 0;
+		phaseone.style.opacity = 1;
+		endphase.style.opacity = 0;
+		p3t1.style.opacity = 0;
+		p3t2.style.opacity = 0;
+		p5btn.style.opacity = 0;
+
+		setTimeout(function() {
+			loop = 0
+			startIntro()
+		}, 200)
+	}
+
+</script>
+
+</body>
+</html>

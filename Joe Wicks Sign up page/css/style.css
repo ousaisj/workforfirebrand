@@ -1,0 +1,282 @@
+@charset "UTF-8";
+
+@font-face {
+   font-family: 'bebas_neue_book';
+   src: url('../fonts/bebasneue_book-webfont.woff') format('woff2'),
+        url('../fonts/bebasneue_book-webfont.woff2') format('woff');
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'bebas_neuebold';
+   src: url('../fonts/bebasneue_bold-webfont.woff2') format('woff2'),
+        url('../fonts/bebasneue_bold-webfont.woff') format('woff');
+   font-weight: normal;
+   font-style: normal;
+}
+@font-face {
+    font-family: 'itc_avant_garde_book';
+    src: url('../fonts/ITCAvantGardeStd-Bk.eot');
+    src: url('../fonts/ITCAvantGardeStd-Bk.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ITCAvantGardeStd-Bk.woff') format('woff'),
+        url('../fonts/ITCAvantGardeStd-Bk.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+	background-color:white;
+	padding:0;
+	margin:0; 
+	font-family: 'bebas_neue_book';
+}
+
+#headeredit { 
+width:100%;
+height:40px;
+position:relative;
+z-index:-1;
+}
+
+#header111 {
+  color:white;
+  margin-left:40px;
+
+}
+
+#paragraphuno {
+font-size:22px;
+margin: 20px 0 0 40px;
+border:0;
+color: #00a884;
+}
+
+#footeredit { 
+width:100%;
+height:40px;
+text-align:right ;
+position:relative;
+z-index:-1;
+color:white;
+}
+
+.container {
+ position: relative;
+ width: 960px;
+ margin: 0 auto;
+ overflow: hidden
+}
+
+#headingcontainer {
+float: left;
+margin: 0;
+background-color:#00a884;
+width:100%;
+}
+
+#firstheading {
+font-size:65px;
+width:380px;
+margin: 30px 0 10px 40px;
+border:0;
+color:#00a884;
+}
+
+#secondheading {
+font-size:65px;
+width:380px;
+margin: 20px 0 20px 40px;
+border:0;
+color:white
+}
+
+#thirdheading {
+font-size:45px;
+margin: 60px 40px 0 0;
+border:0;
+color: #00a884;
+}
+
+#fourthheading {
+font-size:35px;
+margin: 20px 40px 0 0;
+border:0;
+color: #00a884;
+}
+
+#textcontainer1 { 
+	width: 40%;
+  text-align:left;
+  color:#00a884;
+  margin-bottom:40px;
+ }
+
+#textcontainer2 { 
+  width: 60%;
+  text-align:right;
+  color:#00a884;
+  margin-bottom:40px;
+  float:left;
+ }
+
+ #buttonedit{
+ 	padding: 10px;
+ 	float: left;
+  background-color:white;
+  border: 1px solid #00a884;
+  color: #00a884;
+  font-family: 'bebas_neue_book'
+  font-size: 50px;
+  margin: 0 0 0 40px;
+ }
+
+ #buttonedit2{
+  padding: 10px;
+  margin: 40px 40px 0 0;
+  background-color:white;
+  border: 1px solid #00a884;
+  color: #00a884;
+  font-family: 'bebas_neue_book'
+  font-size: 50px;
+ }
+
+#toppicture { 
+position:absolute;
+width:295px;
+height:100%;
+bottom:0;
+background-image:url(../img/joe_header.png);
+background-size:auto 100%;
+background-repeat:no-repeat;
+background-position: left;
+right:0;
+z-index: 10
+ }
+
+#container2 {
+ position: relative;
+ width: 960px;
+ height: 300px;
+ margin: 0 auto;
+ overflow: hidden
+ background-color:#00a884;
+}
+
+.location { 
+padding: 20px;
+-webkit-appearance: none;
+-moz-appearance : none;
+border:1px solid #ccc;
+border-radius:3px;
+padding:10px 60px;
+width: 200px;
+float:left;
+background-color:white;
+border: 1px solid #00a884;
+color: #00a884;
+font-family: 'bebas_neue_book'
+font-size: 50px;
+ }
+
+#submitdesign {
+  background-color:white;
+}
+
+
+#location {
+  position: relative;
+}
+#location::after {
+content: "";
+width:30px;
+height:30px;
+background-image:url(../img/chevron.jpg);
+background-size: auto 100%;
+background-repeat:no-repeat;
+position: absolute;
+pointer-events:none;
+left: 170px;
+top: 3px;
+
+}
+ 
+#dropdownarrow {
+
+position:relative;
+width:30px;
+height:30px;
+background-image:url(..img/dropdown.png);
+background-size: auto 100%;
+background-repeat:no-repeat;
+ }
+
+ #youmiddle { 
+width:50%;
+height:300px;
+position: relative;
+float: left;
+background-position:right;
+ background-color:#00a884;
+ background-image:url(../img/map.png);
+background-repeat:no-repeat;
+background-size: auto 120%;
+  }
+
+ #selectlocationbox {
+ width:50%;
+ height:100%;
+ float: left;
+ background-color:#00a884;
+
+ }
+
+#submityourvote {
+margin:140px 0 0 40px;
+}
+
+
+#paragraph2 {
+width:450px;
+color: white;
+margin: 0 0 0 40px;
+}
+
+#bottomblock {
+font-size:22px;
+margin: 20px 40px 0 0;
+border:0;
+color: #00a884;
+}
+
+
+
+#container3 {
+ position: relative;
+ width: 960px;
+ height:500px;
+ margin: 0 auto;
+ overflow: hidden
+}
+
+
+#bottompicture{
+width:40%;
+height:500px;
+float: left;
+background-image:url(../img/joe_book.jpg);
+background-repeat: no-repeat;
+background-size: auto 100%;
+  
+}
+
+#footer111{
+  margin-right:40px;
+}
+
+
+
+
+
+
+

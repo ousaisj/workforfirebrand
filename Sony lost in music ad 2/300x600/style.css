@@ -1,0 +1,172 @@
+  body {
+  	margin:0;
+  	padding:0;
+  }
+
+  #sony-container {
+  	width:728px;
+  	height:90px;
+  	background-color: #fff;
+  	position: relative;
+  	overflow: hidden;
+  }
+
+  #sony-button {
+  	width:100%;
+  	height:0px;
+  	background-color: #000;
+  	position: absolute;
+  	bottom:0;
+  	background-image: url(logo.png);
+  	background-size:100%;
+
+  	transition : 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+	-webkit-transition : 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+	-moz-transition : 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+
+  #sony-phase-two {
+    width:728px;
+    height:90px;
+  	position: absolute;
+  	opacity: 0;
+
+  	transition : 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+	-webkit-transition : 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+	-moz-transition : 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  #sony-phase-two-bg {
+  	background-image: url(vr_img.jpg);
+  	background-size: 100%;
+  }
+  #sony-phase-two-text {
+  	background-image: url(vr_text.png);
+  	background-size: 100%;
+  	opacity: 0;
+  	transition : 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+	-webkit-transition : 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+	-moz-transition : 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  #sony-phase-end {
+  	 width:728px;
+    height:90px;
+  	position: absolute;
+
+  	opacity: 0;
+
+  	transition : 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+	-webkit-transition : 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+	-moz-transition : 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  #sony-phase-end-bg {
+  	background-image: url(endframe_bg.jpg);
+  	background-size: 100%;
+  }
+  #sony-phase-end-text {
+  	background-image: url(endframe_txt.png);
+  	opacity: 0;
+  	background-size: 100%;
+  	transition : 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+	-webkit-transition : 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+	-moz-transition : 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  #sony-phase-end-findout {
+  	background-image: url(endframe_txt2.png);
+  	opacity: 0;
+  	background-size: 100%;
+  	transition : 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+	-webkit-transition : 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+	-moz-transition : 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+
+  #sony-phase-end-finsh {
+    background-image: url(lostbutton.png);
+    opacity: 0;
+    background-size: 100%;
+    transition : 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-transition : 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -moz-transition : 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+
+  #sony-border {
+    width:726px;
+    height:88px;
+  	    border: 1px solid rgba(0,0,0,0.3);
+  	position: absolute;
+  	z-index: 999;
+  }
+
+  #sony-bg {
+  	position: absolute;
+  	 width:728px;
+    height:90px;
+
+  	transition : 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+	-webkit-transition : 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+	-moz-transition : 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  .sony-bg {
+   width:728px;
+    height:90px;
+  	position: absolute;
+
+  	transition : 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+	-webkit-transition : 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+	-moz-transition : 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+	opacity: 0;
+  }
+  #sony-bg-one {
+  	background-color: #FF1EBE;
+  }
+  #sony-bg-two {
+  	background-color: #FFB000;
+  }
+  #sony-bg-three {
+  	background-color: #20C3ED;
+  }
+
+  #sony-bg-end {
+  	background-image: url(endframe.jpg);
+  	background-size:100%;
+  	opacity: 0;
+
+  	transition : 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+	-webkit-transition : 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+	-moz-transition : 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  #sony-phase-end-logo {
+  	background-image: url(lost_logo.png);
+  	background-size:100%;
+  }
+
+  img {
+  	display: block!important;
+  	width:100%!important;
+  	height:auto!important;
+  }
+
+  #sony-text {
+  	top:0px;
+    height:90px;
+  	width:728px;
+  	left:0px;
+  	position: absolute;
+}
+  .sony-text {
+  	width:100%;
+  	height:100%;
+  	position: absolute;
+
+  	transition : 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+	-webkit-transition : 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+	-moz-transition : 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  	top:0;
+  }
+  #sony-text-one,#sony-text-two,#sony-text-three {
+  	opacity: 0;
+  }
+
+  #sony-text-glitch {
+  	display: none;
+  }

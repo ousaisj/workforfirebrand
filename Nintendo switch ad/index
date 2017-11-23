@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+
+<head> 
+<meta charset="UTF-8">
+<title>Nintendo Switch</title>
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script
+  src="js/jquery-ui.js"></script>
+</head>
+
+<body>
+
+    <div id="switch-container">
+
+        <div id="background"></div>
+		
+		<div id="phases">
+
+			<div id="phaseone">
+				<div id="nintendo" class="introwriting"><img src="img/nintendoAlone.png" /></div>
+				<div id="is" class="introwriting"><img src="img/isAlone.png" /></div>
+				<div id="here"  class="introwriting"><img src="img/backAlone.png" /></div>
+			</div>
+
+
+			<div id="phasetwo">
+				<div id="marioPic" class="intropics"><img src="img/marioAlone.png" /></div>
+				<div id="starPic" class="intropics"><img src="img/starAlone.png" /></div>
+				<div id="yahooPic" class="intropics"><img src="img/Yahoo2.png" /></div>
+			</div>
+
+
+			<div id="phasethree">
+				<div id="switchPic" class="secondpics"><img src="img/switchLogo.png" /></div>
+				<div id="level1Switch" class="secondpics"><img src="img/level1Switch.png" /></div>
+			</div>
+
+
+		</div>
+	</div>
+
+<script>
+$(document).ready(function(){
+var bg = document.getElementById('background')
+
+var t1 = document.getElementById('nintendo')
+var t2 = document.getElementById('is')
+var t3 = document.getElementById('here')
+
+var pc1 = document.getElementById('marioPic')
+var pc2 = document.getElementById('starPic')
+var pc3 = document.getElementById('yahooPic')
+
+var pc4 = document.getElementById('switchPic')
+var pc5 = document.getElementById('level1Switch')
+
+var counter = 0 
+var timer = 0
+var loop = 0
+
+function startIntro () {
+
+	switch (counter) {
+		case 0 :
+			timer = 1000
+			bg.style.backgroundColor = '#00FF00'
+            t1.style.opacity = 1
+		break;
+		case 1 :
+			timer = 1000 
+			bg.style.backgroundColor = '#FF0000'
+			t2.style.opacity = 1
+
+		break;
+		case 2 : 
+			timer = 1000
+			bg.style.backgroundColor = '#B23AEE'
+            t3.style.opacity = 1
+		break;
+		case 3 :
+			timer = 1000
+			bg.style.backgroundColor = '#0000FF'
+			t1.style.opacity = 1
+			t2.style.opacity = 1
+			t3.style.opacity = 1
+			pc1.style.opacity = 1
+		    pc2.style.opacity = 1
+		break;
+		case 4 :
+			timer = 1000
+			bg.style.backgroundColor = '#0000FF'
+			t1.style.opacity = 1
+			t2.style.opacity = 1
+			t3.style.opacity = 1
+
+		break;
+		case 5 :
+			timer = 1000
+		    colourFlash();
+		    console.log('working');
+			t1.style.opacity = 1
+			t2.style.opacity = 1
+			t3.style.opacity = 1
+		break;
+		case 6 :
+			timer = 1900
+            $('#marioPic').animate({bottom:'+=170px'}, 1000);
+			t1.style.opacity = 0
+			t2.style.opacity = 0
+			t3.style.opacity = 0
+		break;
+		case 7 :
+			timer = 1300
+			pc3.style.opacity = 1
+		break;
+		case 8 :
+			timer = 1000
+			pc4.style.opacity = 1
+		break;
+		case 9 :
+			timer = 1000
+			pc5.style.opacity = 1
+		break;
+		break;
+	}
+
+	counter++
+
+	if (counter > 9) {
+		counter = 0
+		loop++
+	}
+
+	setTimeout(function() {
+		startIntro();
+	},timer)
+}
+
+function colourFlash() {
+
+}
+startIntro();
+
+var counter2 = 0 
+var timer2 = 0
+var loop2 = 0
+
+
+function colourFlash() {
+
+	switch (counter2) {
+		case 0 :
+			timer = 100
+			bg.style.backgroundColor = '#FF34B3'
+		break;
+		case 1 :
+			timer = 100
+			bg.style.backgroundColor = '#00F5FF'
+		break;
+		case 2 : 
+			timer = 100
+            bg.style.backgroundColor = '#00FF00'
+		break;
+		case 3 :
+			timer = 100
+            bg.style.backgroundColor = '#FF4500'
+		break;
+		case 4 :
+			timer = 100
+            bg.style.backgroundColor = '#FFC125'
+		break;
+		case 5 :
+			timer = 100
+			bg.style.backgroundColor = '#DC143C'
+		break;
+		case 6 :
+			timer = 100
+			bg.style.backgroundColor = '#DC143C'
+		break;
+		case 7 :
+			timer = 100
+			bg.style.backgroundColor = '#8E388E'
+		break;
+		case 8 :
+			timer = 100
+			bg.style.backgroundColor = '#CDC9C9'
+		break;
+		case 9 :
+			timer = 100
+			bg.style.backgroundColor = '#F4A460'
+		break;
+		case 10 :
+			timer = 100
+			bg.style.backgroundColor = '#FFE7BA'
+		break;
+
+	}
+					
+counter2++
+
+	if (counter2 > 10) {
+		counter2 = 0
+		loop2++
+	}
+
+	setTimeout(function() {
+		if (loop2==0) colourFlash();
+	},timer)
+}
+});
+</script>
+
+
+
+    
+
+
+</body>
+</html>
+
+
